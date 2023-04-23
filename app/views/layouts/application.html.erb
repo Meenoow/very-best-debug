@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <nav>
+  
+    </nav>
     <title>Very Best Debug</title>
     <%= csrf_meta_tags %>
 
@@ -15,6 +18,10 @@
   </head>
 
   <body>
+     <ul>
+        <li><a href="/users">Users</a></li> 
+        <li><a href="/venues">Venues</a></li> 
+      </ul>
     <%= yield %>
   </body>
 </html>
