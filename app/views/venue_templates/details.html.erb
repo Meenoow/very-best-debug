@@ -21,7 +21,8 @@
     <%= @the_venue.created_at %>
   </dd>
 
-  <dt>Edit venue</dt>
+
+<dt>Edit venue</dt>
   <dd>
     <form action="/update_venue/<%= @the_venue.id %>">
       <label for="browser_venue">Address</label>
@@ -55,20 +56,19 @@
   </tr>
 
   <% @the_venue.comments.each do |comment| %>
-  <tr>
-    <td>
-      <%= comment.commenter.username %>
-    </td>
+    <tr>
+      <td>
+        <%= comment.commenter.username %>
+      </td>
 
-    <td>
-      <%= comment.body %>
-    </td>
+      <td>
+        <%= comment.body %>
+      </td>
 
-    <td>
-      <%= comment.created_at %>
-    </td>
-  </tr>
-  
+      <td>
+        <%= comment.created_at %>
+      </td>
+    </tr>
   <% end %>
 </table>
 
