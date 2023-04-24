@@ -38,7 +38,7 @@ class VenuesController < ApplicationController
     #the_id = params.fetch("venue_id")
     the_id = params.fetch("the_id")
     #@venue = Venue.where({ :id => the_id })
-    venue = Venue.where({ :id => the_id })
+    venue = Venue.where({ :id => the_id }).at(0)
     venue.address = params.fetch("query_address")
     venue.name = params.fetch("query_name")
     venue.neighborhood = params.fetch("query_neighborhood")
